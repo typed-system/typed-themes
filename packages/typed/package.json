@@ -1,0 +1,30 @@
+{
+  "name": "@typed-themes/typed",
+  "version": "0.0.1",
+  "description": "Typed System Default Theme",
+  "author": "Martin Broder <mrtnbroder@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": {
+    "dist/index.cjs.js": "dist/index.cjs.js",
+    "dist/index.esm.js": "dist/index.esm.js"
+  },
+  "directories": {
+    "dist": "dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "homepage": "https://github.com/typed-system/typed-themes/tree/master/packages/typed#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typed-system/typed-themes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/typed-system/typed-themes/issues"
+  }
+}

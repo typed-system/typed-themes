@@ -1,0 +1,29 @@
+{
+  "name": "typed-themes",
+  "private": true,
+  "author": "Martin Broder <mrtnbroder@gmail.com>",
+  "homepage": "https://typed-system.com/themes",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.18.3",
+    "typescript": "^3.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:typed-system/typed-themes.git"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
