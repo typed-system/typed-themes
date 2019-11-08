@@ -1,0 +1,9 @@
+{
+  // "files" should stay "[]" as this will prevent an incorrect invocation of
+  // tsc without -b from trying to build the entire packages folder source
+  // files as one compilation.
+  "files": [],
+  "references": [
+    { "path": "typed" },
+  ]
+}

@@ -24,24 +24,30 @@ Typed is the default theme as seen on [typed-system.com](https://typed-system.co
 A theme is defined by the following interface
 
 ```tsx
-interface Theme {
+export type ObjectOrArray<T> = T[] | { [K: string]: T | ObjectOrArray<T> };
+
+export type Scale = ObjectOrArray<number | string>;
+
+export type LengthValue = string | 0 | number;
+
+export type ResponsiveValue<T> = T | Array<T | null> | { [key: string]: T };
+
+export interface Theme {
   /**
    * Name of the theme, e.g. "light"
    * */
   name: string
   /**
-   * The space key is a specially-named scale intended for use with margin, padding, and other layout-related CSS properties.
-   * A space scale can be defined as either a plain object or an array, but by convention an array is preferred.
+   * The spacing key is a specially-named scale intended for use with margin, padding, and other layout-related CSS properties.
+   * A spacing scale can be defined as either a plain object or an array, but by convention an array is preferred.
    * This is an intentional constraint that makes it difficult to add "one-off" or "in-between" sizes that could lead
    * to unwanted and rippling affects to layout.
    *
    * Properties affeced by this key:
    * margin, margin-top, margin-right, margin-bottom, margin-left, padding, padding-top, padding-right,
    * padding-bottom, padding-left, grid-gap, grid-column-gap, grid-row-gap
-   *
-   * Note: other names under consideration include spacing, spaces, and lengths.
    */
-  space,
+  spacing: ArrayOrObject<ResponsiveValue<LengthValue>>,
   // typography
   fontSizes,
   fonts,

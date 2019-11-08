@@ -1,9 +1,10 @@
 {
   "name": "typed-themes",
   "private": true,
-  "author": "Martin Broder <mrtnbroder@gmail.com>",
-  "homepage": "https://typed-system.com/themes",
+  "description": "Typed Themes Monorepo",
+  "author": "Martin Broder <mrtnbroder@gmail.com> (https://martinbroder.com)",
   "license": "MIT",
+  "homepage": "https://typed-system.com/themes",
   "workspaces": [
     "packages/*"
   ],
@@ -19,11 +20,5 @@
     "hooks": {
       "precommit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,md}": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }
