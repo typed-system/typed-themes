@@ -12,11 +12,12 @@
     "lib/index.cjs.js": "lib/index.cjs.js",
     "lib/index.esm.js": "lib/index.esm.js"
   },
+  "sideEffects": false,
   "files": [
     "/lib"
   ],
   "scripts": {
-    "prepublishOnly": "tsc -b ."
+    "build": "tsc -b ."
   },
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
